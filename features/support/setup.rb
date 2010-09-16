@@ -8,14 +8,14 @@ class Book < CouchRest::Model::Base
   include Recloner
   use_database CLONING_DB
   
-  property :name
-  view_by :name
+  property :title
+  view_by :title
 end
 
 Before do |scenario|
-  VERSIONING_DB.create!
+  CLONING_DB.create!
 end
 
 After do |scenario|
-  VERSIONING_DB.delete!
+  CLONING_DB.delete!
 end
