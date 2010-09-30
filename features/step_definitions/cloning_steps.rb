@@ -1,5 +1,5 @@
 Given /^an object in the database$/ do
-  @book = Book.create :title => "The Adventures of Tom Sawyer"
+  @book = Book.create :name => "The Adventures of Tom Sawyer"
 end
 
 When /^I clone the object$/ do
@@ -7,7 +7,7 @@ When /^I clone the object$/ do
 end
 
 Then /^their attributes should be equal$/ do
-  @book_clone.title.should == @book.title
+  @book_clone.name.should == @book.name
 end
 
 Then /^the resulting object should be a new record$/ do
