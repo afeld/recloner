@@ -10,6 +10,7 @@ class Book < CouchRest::Model::Base
   use_database RECLONER_TEST_DB
   
   property :name
+  property :author
   property :published, TrueClass
   view_by :name
 end

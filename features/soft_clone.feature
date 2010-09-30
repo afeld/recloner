@@ -4,4 +4,5 @@ Feature: Soft Clone
     Given there is a document in the database
     When I soft clone that document
     Then a copy of the document should exist in memory
+    And their attributes should be equal
     And there should only be a single document in the database
